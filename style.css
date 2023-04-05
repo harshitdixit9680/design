@@ -310,7 +310,11 @@ font-size: 0.75rem;
     fill: none;
 } */
 
-
+.form-select[multiple], .form-select[size]:not([size="1"]) {
+ background-color: #02044A;
+ color: wheat;
+ padding-right: 4.75rem;
+}
 
 
 
