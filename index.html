@@ -89,21 +89,26 @@
                         <p>Please let us know what type of business best describes you as entreprenuer or businessman.</p>
                     </div>
                     
-                    <div class="input__container">
-                        <div class="selection newB">
-                            <div class="imoji">
-                                <!-- <ion-icon name="happy"></ion-icon> -->
+                    <div class="input__container" >
+                        <div class="selection  newB "id = "myDiv">
+                            <div class="imoji" id="demo">
+                                <ion-icon name="happy"></ion-icon>
                                 
                             </div>
+
+                            <!-- <input  type ="button" ,id = "btn" ,value ="Click Here" class="imoji" > -->
                             <div class="descriptionTitle">
+                                <h3>Existing Business</h3>
+                                <p>Have been operating beyond 12 months</p>
                             </div>
                         </div>
-                        <div class="selection exitB">
-                            <div class="imoji">
-                                <!-- <ion-icon name="business"></ion-icon> -->
+                        <div class="selection exitB" id = "myDiv1">
+                            <div class="imoji" id="demo1" >
+                                <ion-icon name="business"></ion-icon>
                             </div>
                             <div class="descriptionTitle">
-                          
+                                <h3>Existing Business</h3>
+                                <p>Have been operating beyond 12 months</p>
                             </div>
                         </div>
                         
@@ -120,49 +125,70 @@
                         <p>Please let us know what type of business best describes you as entreprenuer or businessman.</p>
                     </div>
                     
-                
+                    <div class="input__container">
+                        <div class="selection newB" id = "myDiv2">
+                            <div class="imoji">
+                                <ion-icon name="desktop"></ion-icon>
+                                
+                            </div>
+                            <div class="descriptionTitle">
+                                <h3>Website Development</h3>
+                                <p>Development of online websites</p>
+                            </div>
+                        </div>
+                        <div class="selection exitB" id = "myDiv3">
+                            <div class="imoji">
+                                <ion-icon name="phone-portrait"></ion-icon>
+                            </div>
+                            <div class="descriptionTitle">
+                                <h3>Development of Mobile App</h3>
+                                <p>Development of android and IOS mobile app</p>
+                            </div>
+                        </div>
                         <div class="buttons">
                             <a class="prev__btn" onclick="prevForm();" >Back</a>
                             <a class="nxt__btn"  onclick="nextForm();" >Next</a>    
                         </div>
                     </div>
-
-
-
-                    <fieldset class="active__form" id="form4">
-                        <div class="sub__title__container">
-                            <p>Step 4/5</p>
-                            <h2>Please select your budget</h2>
-                            <p>Please let us know budget for your project so yes are great that we can give the right quote thanks</p>
-                        </div>
+                </fieldset>
+                <fieldset class="active__form" id="form4">
+                    <div class="sub__title__container">
+                        <p>Step 4/5</p>
+                        <h2>Please select your budget</h2>
+                        <p>Please let us know budget for your project so yes are great that we can give the right quote thanks</p>
+                    </div>
+                    
+                    <div class="input__container">
                         
                         
-                            <div class="buttons">
-                                <a class="prev__btn" onclick="prevForm();" >Back</a>
-                                <a class="nxt__btn"  onclick="nextForm();" >Next</a>     
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="active__form" id="form5">
-                        <div class="sub__title__container">
-                            <p>Step 5/5</p>
-                            <h2>Complete Submission</h2>
-                            <p>Thanks for completing the form and for your time.Plss enter your email below and submit the form</p>
-                        </div>
-                        
-                        <div class="input__container">
-                            <label for="Email">Enter your email</label>
-                            <input type="text">
-                            <div class="buttons">
-                                <a class="prev__btn"  onclick="prevForm();" >Back</a>
-                                <a class="nxt__btn" id="submitBtn" onclick="nextForm();" >Next</a>    
-                            </div>
+                        <input type="range" min="10000" max="500000" value="250000" class="slider">
+                        <div class="output__value">
                             
                         </div>
-                    </fieldset>
-
-
-
+                        
+                        <div class="buttons">
+                            <a class="prev__btn" onclick="prevForm();" >Back</a>
+                            <a class="nxt__btn"  onclick="nextForm();" >Next</a>     
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="active__form" id="form5">
+                    <div class="sub__title__container">
+                        <p>Step 5/5</p>
+                        <h2>Complete Submission</h2>
+                        <p>Thanks for completing the form and for your time.Plss enter your email below and submit the form</p>
+                    </div>
+                    
+                    <div class="input__container">
+                        <label for="Email">Enter your email</label>
+                        <input type="text">
+                        <div class="buttons">
+                            <a class="prev__btn"  onclick="prevForm();" >Back</a>
+                            <a class="nxt__btn" id="submitBtn" onclick="nextForm();" >Next</a>    
+                        </div>
+                        
+                    </div>
+                </fieldset>
 
 
 
@@ -328,11 +354,68 @@ output.innerHTML = slider.value ;
 slider.oninput = function() {
     output.innerHTML = this.value ;
     
+
+
+
+
+
+
+
+
     
 }</script>
                                 <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
                                 myLink.addEventListener('click', function(e) {
                                   e.preventDefault();
                                 });</script>
+
+
+
+<script>
+    // for click to color btn
+let color =  ['red','orange']
+let myDiv = document.getElementById('myDiv')
+myDiv.addEventListener('click',function(){
+
+    let randomColor = color[Math.floor(Math.random()*color.length)]
+    // console.log(randomColor)
+    // document.btn.backgroundColor=randomColor
+    document.getElementById("myDiv").style.backgroundColor = "#0b2229";
+})
+let color1 =  ['red','orange']
+let myDiv1 = document.getElementById('myDiv1')
+myDiv1.addEventListener('click',function(){
+
+    let randomColor = color[Math.floor(Math.random()*color.length)]
+    // console.log(randomColor)
+    // document.btn.backgroundColor=randomColor
+    document.getElementById("myDiv1").style.backgroundColor = "#0b2229";
+})
+let color2 =  ['red','orange']
+let myDiv2 = document.getElementById('myDiv2')
+myDiv2.addEventListener('click',function(){
+
+    let randomColor = color[Math.floor(Math.random()*color.length)]
+    // console.log(randomColor)
+    // document.btn.backgroundColor=randomColor
+    document.getElementById("myDiv2").style.backgroundColor = "#0b2229";
+})
+let color3 =  ['red','orange']
+let myDiv3 = document.getElementById('myDiv3')
+myDiv3.addEventListener('click',function(){
+
+    let randomColor = color[Math.floor(Math.random()*color.length)]
+    // console.log(randomColor)
+    // document.btn.backgroundColor=randomColor
+    document.getElementById("myDiv3").style.backgroundColor = "#0b2229";
+})
+</script>
+
+
+
+<!-- <script>
+    let back = document.getElementById("myDiv").style.backgroundColor;
+   
+    </script> -->
 </body>
 </html>
