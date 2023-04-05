@@ -330,6 +330,10 @@ font-size: 0.75rem;
     background-color: var(--primary-color);
     cursor: pointer;
 }
+.selection div .active {
+    background-color: var(--secondery-color);
+}
+
 
 .imoji{
     display: flex;
