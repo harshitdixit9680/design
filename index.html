@@ -77,7 +77,8 @@
                     
                     <div class="input__container">
                         <label for="name">Enter your name</label>
-                        <input type="text">
+                        <input type="text" 
+                        id="name">
                         <a class="nxt__btn" onclick="nextForm();"> Next</a>
                     </div>
                 </fieldset>
@@ -90,30 +91,40 @@
                     </div>
                     
                     <div class="input__container" >
-                        <div class="selection  newB "id = "myDiv">
-                            <div class="imoji" id="demo">
-                                <ion-icon name="happy"></ion-icon>
-                                
-                            </div>
 
-                            <!-- <input  type ="button" ,id = "btn" ,value ="Click Here" class="imoji" > -->
-                            <div class="descriptionTitle">
-                                <h3>Existing Business</h3>
-                                <p>Have been operating beyond 12 months</p>
-                            </div>
-                        </div>
-                        <div class="selection exitB" id = "myDiv1">
-                            <div class="imoji" id="demo1" >
-                                <ion-icon name="business"></ion-icon>
-                            </div>
-                            <div class="descriptionTitle">
-                                <h3>Existing Business</h3>
-                                <p>Have been operating beyond 12 months</p>
-                            </div>
-                        </div>
+                        <select class="form-select selection" size="2" aria-label="size 2 select example">
+                      
+                            <option value="1">
+                                <div class="imoji" id="demo">
+                                    <ion-icon name="happy"></ion-icon>
+                                    
+                                </div>
+    
+                                <!-- <input  type ="button" ,id = "btn" ,value ="Click Here" class="imoji" > -->
+                                <div class="descriptionTitle">
+                                    <h3>1. Existing Business</h3>
+                                    <p>Have been operating beyond </p>
+                                </div>
+                            </option>
+                            <option value="2">
+                                <div class="imoji" id="demo1" >
+                                    <ion-icon name="business"></ion-icon>
+                                </div>
+                                <div class="descriptionTitle">
+                                    <h3>2. Existing Business</h3>
+                                    <p>Have been operating beyond </p>
+                                </div>
+                            </option>
+                           
+                          </select>
+
+
+
+                      
+                        
                         
                         <div class="buttons">
-                            <a class="prev__btn" onclick="prevForm();" >Back</a>
+                            <!-- <a class="prev__btn" onclick="prevForm();" >Back</a> -->
                             <a class="nxt__btn"  onclick="nextForm();" >Next</a>    
                         </div>
                     </div>
@@ -126,27 +137,43 @@
                     </div>
                     
                     <div class="input__container">
-                        <div class="selection newB" id = "myDiv2">
-                            <div class="imoji">
-                                <ion-icon name="desktop"></ion-icon>
-                                
-                            </div>
-                            <div class="descriptionTitle">
-                                <h3>Website Development</h3>
-                                <p>Development of online websites</p>
-                            </div>
-                        </div>
-                        <div class="selection exitB" id = "myDiv3">
-                            <div class="imoji">
-                                <ion-icon name="phone-portrait"></ion-icon>
-                            </div>
-                            <div class="descriptionTitle">
-                                <h3>Development of Mobile App</h3>
-                                <p>Development of android and IOS mobile app</p>
-                            </div>
-                        </div>
+                
+
+
+
+
+
+
+
+
+
+
+                        <select class="form-select selection" size="2" aria-label="size 2 select example">
+                      
+                            <option value="1" selection newB>
+                                <div class="imoji">
+                                    <ion-icon name="desktop"></ion-icon>
+                                    
+                                </div>
+                                <div class="descriptionTitle">
+                                    <h3>1. Website Development</h3>
+                                    <p>Development of online </p>
+                                </div>
+                            </option>
+                            <option value="2" selection exitB>
+                                <div class="imoji">
+                                    <ion-icon name="phone-portrait"></ion-icon>
+                                </div>
+                                <div class="descriptionTitle">
+                                    <h3>2. Development of Mobile App</h3>
+                                    <p>Development of android  </p>
+                                </div>
+                            </option>
+                           
+                          </select>
+
                         <div class="buttons">
-                            <a class="prev__btn" onclick="prevForm();" >Back</a>
+                            <!-- <a class="prev__btn" onclick="prevForm();" >Back</a> -->
                             <a class="nxt__btn"  onclick="nextForm();" >Next</a>    
                         </div>
                     </div>
@@ -167,7 +194,7 @@
                         </div>
                         
                         <div class="buttons">
-                            <a class="prev__btn" onclick="prevForm();" >Back</a>
+                            <!-- <a class="prev__btn" onclick="prevForm();" >Back</a> -->
                             <a class="nxt__btn"  onclick="nextForm();" >Next</a>     
                         </div>
                     </div>
@@ -179,17 +206,19 @@
                         <p>Thanks for completing the form and for your time.Plss enter your email below and submit the form</p>
                     </div>
                     
-                    <div class="input__container">
-                        <label for="Email" id = "email_ids">Enter your email</label>
+                    <div class="input__container" id="form">
+                        <label for="Email" >Enter your email</label>
                         <input type="email"
+                        id="email" 
                         placeholder="Email Id" required>
                         <div class="buttons">
-                            <a class="prev__btn"  onclick="prevForm();" >Back</a>
-                            <a class="nxt__btn" id="submitBtn" onclick="nextForm();">Next</a>    
+                            <!-- <a class="prev__btn"  onclick="prevForm();" >Back</a> -->
+                            <a href="#" class="nxt__btn" id="submitBtn" onclick="clearText();" >Next</a>    
                         </div>
                         
                     </div>
                 </fieldset>
+       
 
 
 
@@ -375,7 +404,20 @@ slider.oninput = function() {
 
 
 
-<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script>
     // for click to color btn
 let color =  ['red','orange']
 let myDiv = document.getElementById('myDiv')
@@ -413,21 +455,26 @@ myDiv3.addEventListener('click',function(){
     // document.btn.backgroundColor=randomColor
     document.getElementById("myDiv3").style.backgroundColor = "#0b2229";
 })
-</script>
+</script> -->
 
 
 
-<script>
+<script >
     let submitBtn = document.getElementById("submitBtn")
-    let email_ids = document.getElementById("email_ids")
+    let inputs = document.getElementById("inputs")
 
+
+    const clearText = () => {
+  const email = document.querySelector("#email");
+  email.value = "";
+  email.focus();
+};
 
     submitBtn.addEventListener('click',function(){
-        alert('Your Form Succesfully Submitted')
-        document.getElementById("submitBtn").reset();
+        
+        alert('Your Form Succesfully Submitted')    
     }) 
-
-   
+  
     </script>
 </body>
 </html>
