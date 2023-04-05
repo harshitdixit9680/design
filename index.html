@@ -180,11 +180,12 @@
                     </div>
                     
                     <div class="input__container">
-                        <label for="Email">Enter your email</label>
-                        <input type="text">
+                        <label for="Email" id = "email_ids">Enter your email</label>
+                        <input type="email"
+                        placeholder="Email Id" required>
                         <div class="buttons">
                             <a class="prev__btn"  onclick="prevForm();" >Back</a>
-                            <a class="nxt__btn" id="submitBtn" onclick="nextForm();" >Next</a>    
+                            <a class="nxt__btn" id="submitBtn" onclick="nextForm();">Next</a>    
                         </div>
                         
                     </div>
@@ -291,12 +292,15 @@ function progressBar(){
     if(viewId===5){
         icon5.classList.add('active');
         nxtBtn.innerHTML = "Submit"
+        
+        
     }
     if(viewId>5){
         icon2.classList.remove('active');
         icon3.classList.remove('active');
         icon4.classList.remove('active');
         icon5.classList.remove('active');
+        // icon1.classList.remove('active');
         
     }
 }
@@ -413,9 +417,17 @@ myDiv3.addEventListener('click',function(){
 
 
 
-<!-- <script>
-    let back = document.getElementById("myDiv").style.backgroundColor;
+<script>
+    let submitBtn = document.getElementById("submitBtn")
+    let email_ids = document.getElementById("email_ids")
+
+
+    submitBtn.addEventListener('click',function(){
+        alert('Your Form Succesfully Submitted')
+        document.getElementById("submitBtn").reset();
+    }) 
+
    
-    </script> -->
+    </script>
 </body>
 </html>
