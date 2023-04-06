@@ -18,8 +18,10 @@
     src="https://kit.fontawesome.com/ad033949aa.js"
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 
 </head>
+<body className='snippet-body'>
 <!-- <body style="background-color:  #110051">
     <h1 class="spp">Example with Steps UI</h1>
     <p class="spp1">Follow The Simple 4 Steps to Complete Your Mapping </p>
@@ -67,8 +69,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="right__container">
-                <fieldset id="form1">
+            <div class="right__container" >
+                <form action="">
+                <fieldset id="form1" >
                     <div class="sub__title__container ">
                         <p>Step 1/5</p>
                         <h2>Let's start with your name</h2>
@@ -78,7 +81,7 @@
                     <div class="input__container">
                         <label for="name">Enter your name</label>
                         <input type="text" 
-                        id="name">
+                        id="input">
                         <a class="nxt__btn" onclick="nextForm();"> Next</a>
                     </div>
                 </fieldset>
@@ -211,18 +214,20 @@
                         <input type="email"
                         id="email" 
                         placeholder="Email Id" required>
-                        <div class="buttons">
-                            <!-- <a class="prev__btn"  onclick="prevForm();" >Back</a> -->
-                            <a href="#" class="nxt__btn" id="submitBtn" onclick="clearText();" >Next</a>    
+                        <div class="buttons"  id="btn">
+                            <a class="prev__btn"  onclick="prevForm();" >Back</a>
+                            <a   id="submitBtn" onclick="nextForm();" ></a>    
+                            <button type="submit" id="khatam" class="btn1 btn-sm nxt__btn " >Submit</button> 
                         </div>
-                        
+                     
+
                     </div>
                 </fieldset>
        
 
 
 
-
+            </form>
 
 
             </div>
@@ -265,6 +270,11 @@ function nextForm(){
 
 }
 
+
+
+ 
+
+
 function prevForm(){
     console.log("helloprev");
     viewId=viewId-1;
@@ -297,7 +307,7 @@ function progressBar1(){
     }
     if(viewId===5){
         icon5.classList.add('active');
-        nxtBtn.innerHTML = "Submit"
+        nxtBtn.innerHTML = ""
     }
     if(viewId>5){
         icon2.classList.remove('active');
@@ -386,7 +396,7 @@ output.innerHTML = slider.value ;
 
 slider.oninput = function() {
     output.innerHTML = this.value ;
-    
+
 
 
 
@@ -460,21 +470,19 @@ myDiv3.addEventListener('click',function(){
 
 
 <script >
-    let submitBtn = document.getElementById("submitBtn")
-    let inputs = document.getElementById("inputs")
 
 
-    const clearText = () => {
-  const email = document.querySelector("#email");
-  email.value = "";
-  email.focus();
-};
 
-    submitBtn.addEventListener('click',function(){
-        
-        alert('Your Form Succesfully Submitted')    
-    }) 
+
+let khatam = document.getElementById("khatam")
+khatam.addEventListener('click', function(){
+//   event.preventDefault();
+alert("Your Form Succesfully Submitted")
+//   form.reset();
+});
+
   
     </script>
-</body>
+ </body>
 </html>
+
